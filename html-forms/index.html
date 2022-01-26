@@ -20,7 +20,6 @@
             <option value="fun">Because it's fun</option>
             <option value="powerful">Because it's powerful</option>
           </select>
-        </label>
       </div>
       <div class="fav-lang-container">
         <p>
@@ -38,19 +37,22 @@
         </p>
       </div>
       <div class="sign-up-section">
-        <label for="sign-up"> Would you like to sign up for more information?</label>
-        <p>
+        <p>Would you like to sign up for more information? </p>
+        <label>
           <input type="checkbox" name="check" id="sign-up" checked="checked">Sign me up!
-        </p>
+        </label>
       </div>
       <div class="comments-section">
-        <p> Comments
-          <br>
-          <label for="comments"></label>
-          <textarea id="comments" name="comments" cols="30" rows="10"></textarea>
-        </p>
+        <p>Comments</p>
+        <label>
+          <textarea name="comments" cols="30" rows="10"></textarea>
+        </label>
       </div>
-      <input type="submit" name="submit" value="Submit">
+      <div>
+        <label>
+          <input type="submit" name="submit-btn" value="Submit">
+        </label>
+      </div>
     </form>
   </div>
 </body>
