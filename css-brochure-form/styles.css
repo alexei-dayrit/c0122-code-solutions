@@ -1,0 +1,70 @@
+body {
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ec5e58;
+  margin: 1em;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0.8em;
+}
+
+input {
+  width: 100%;
+  height: 3.5em;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  border: 1px solid lightgray;
+  margin: 4px 0 1.5em;
+}
+
+::placeholder {
+  color: lightgray;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  padding-left: 5px;
+}
+
+select {
+  height: 3.5em;
+  background-color: #f3f3f3;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  width: 100%;
+  margin: 4px 0 0.5em;
+  padding-left: 0.2em;
+}
+
+option {
+  text-align: left;
+}
+
+.submit-btn {
+  background-color: #ec5c57;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #fef2f1;
+  width: 7.5em;
+  height: 3em;
+  font-size: 16px;
+  border-radius: 2em;
+  text-align: center;
+  float: right;
+}
