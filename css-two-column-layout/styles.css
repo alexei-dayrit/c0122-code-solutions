@@ -59,13 +59,9 @@ h4 {
 
 .column-full {
   width: 100%;
-
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
 }
 
-.column-wrapper {
+.column-half {
   flex-basis: calc(100% / 2);
 }
 
@@ -81,9 +77,13 @@ img {
   height: 120px;
 }
 
+/* No longer needed
+
 .img-container {
   width: 120px;
 }
+
+*/
 
 .margin-right-5px {
   margin-right: 5px;
@@ -115,4 +115,12 @@ button {
 
 p {
   color: #626262;
+}
+
+.column-one-fourth {
+  width: 25%;
+}
+
+.column-three-fourths {
+  width: 75%;
 }
