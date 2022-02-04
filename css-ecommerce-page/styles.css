@@ -1,0 +1,53 @@
+.font-dm {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.container {
+  width: 1400px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-fifth {
+  flex-basis: 20%;
+}
+
+img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 30px;
+  margin: 20px 30px;
+}
+
+p > span {
+  background-color: #fff2e7;
+}
+
+s,
+.item-size {
+  color: lightgray;
+}
+
+.margin-lr-20px {
+  margin: 0 10px;
+}
+
+.border-right {
+  border-right: 1px solid lightgray;
+  padding-right: 5px;
+}
