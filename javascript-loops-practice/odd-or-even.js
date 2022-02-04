@@ -8,5 +8,6 @@ function oddOrEven(numbers) {
     } else {
       newArray.push('odd');
     }
-  } return newArray;
+  }
+  return newArray;
 }

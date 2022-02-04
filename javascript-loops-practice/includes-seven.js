@@ -5,5 +5,6 @@ function includesSeven(array) {
     if (array[i] === 7) {
       return true;
     }
-  } return false;
+  }
+  return false;
 }

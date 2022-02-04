@@ -6,5 +6,6 @@ function filterOutStrings(values) {
     if (typeof values[i] !== 'string') {
       newArray.push(values[i]);
     }
-  } return newArray;
+  }
+  return newArray;
 }
