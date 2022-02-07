@@ -1,13 +1,11 @@
 /* exported compact */
 
 /*
-  - Make variable for new array to house non falsy values
-  - Make variable to house all falsy values
+  - Make variable for new array to house truthy values
   - Loop through input array
-  - Create if statement with condition to check if array index is falsy
-  - If falsy push into falsy array
-  - If truthy push into new array
-  - Return new array outside loop
+  - Create if statement with condition to check if array index is truthy
+  - If truthy push into new array variable
+  - Return new array variable outside loop
 */
 
 function compact(array) {
@@ -19,3 +17,9 @@ function compact(array) {
   }
   return newArray;
 }
+
+/*
+  NOTE FOR MYSELF
+  "if (array[i])" checks if value is truthy.
+  Conditionals execute if condition resolves to a truthy value.
+*/
