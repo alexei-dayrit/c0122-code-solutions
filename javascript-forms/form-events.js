@@ -13,6 +13,14 @@ function handleInput(event) {
   console.log('target value:', event.target.value);
 }
 
+/*
+  Q&A Code for handleInput function
+  ---------------------------------
+  function handleInput(event) {
+    console.log('value of', event.target.name + ':', event.target.value);
+  }
+*/
+
 var $name = document.querySelector('#user-name');
 var $email = document.querySelector('#user-email');
 var $message = document.querySelector('#user-message');
