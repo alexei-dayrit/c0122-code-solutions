@@ -46,3 +46,11 @@ div.pokeball-row > div:first-child > img {
 div.pokeball-row > div:last-child > img {
   transform: rotate(30deg);
 }
+
+/*
+Q & A Code:
+
+.pokeball-wrapper:first-child > img.pokeball { }
+.pokeball-wrapper:last-child > img.pokeball { }
+
+*/
