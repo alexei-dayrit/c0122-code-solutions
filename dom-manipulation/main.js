@@ -4,7 +4,7 @@ var $hotButton = document.querySelector('.hot-button');
 var $counter = document.querySelector('.click-count');
 
 $hotButton.addEventListener('click', function () {
-  $counter.textContent = counter++;
+  $counter.textContent = 'clicks: ' + counter++;
   if (counter < 4) {
     $hotButton.className = 'hot-button cold';
   } else if (counter < 7) {
