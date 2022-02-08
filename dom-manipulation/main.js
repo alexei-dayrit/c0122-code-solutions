@@ -4,16 +4,16 @@ var $hotButton = document.querySelector('.hot-button');
 var $counter = document.querySelector('.click-count');
 
 $hotButton.addEventListener('click', function () {
-  $counter.textContent = 'clicks: ' + counter++;
-  if (counter < 4) {
+  $counter.textContent = 'Clicks: ' + counter++;
+  if (counter <= 4) {
     $hotButton.className = 'hot-button cold';
-  } else if (counter < 7) {
+  } else if (counter <= 7) {
     $hotButton.className = 'hot-button cool';
-  } else if (counter < 10) {
+  } else if (counter <= 10) {
     $hotButton.className = 'hot-button tepid';
-  } else if (counter < 13) {
+  } else if (counter <= 13) {
     $hotButton.className = 'hot-button warm';
-  } else if (counter < 16) {
+  } else if (counter <= 16) {
     $hotButton.className = 'hot-button hot';
   } else {
     $hotButton.className = 'hot-button nuclear';
