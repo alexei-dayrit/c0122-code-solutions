@@ -10,13 +10,14 @@
 */
 
 function capitalizeWord(word) {
+  var lowerCaseWord = word.toLowerCase();
   var newWord = '';
-  for (var i = 0; i < word.length; i++) {
-    newWord += word[i].toLowerCase();
+  for (var i = 0; i < lowerCaseWord.length; i++) {
+    newWord += lowerCaseWord[i];
   }
   if (newWord === 'javascript') {
     return 'JavaScript';
   }
-  var firstCap = newWord[0].toUpperCase() + newWord.slice(1);
-  return firstCap;
+  var firstLetterCap = newWord[0].toUpperCase() + newWord.slice(1);
+  return firstLetterCap;
 }
