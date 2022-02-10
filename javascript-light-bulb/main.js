@@ -3,6 +3,7 @@
   - When button is clicked turns light off
   - When button clicked again light turns back on
 ---------------------
+// Thought process for first attempt
   - Query DOM for button and container
   - Function should change element class name from on-btn to off-btn
     - Should also change container class name from light to dark background
@@ -15,13 +16,16 @@
 var $container = document.querySelector('.container');
 var $button = document.querySelector('.on-btn');
 
+var isLightOn = true;
 function handleLight(event) {
-  if ($button.className === 'on-btn') {
-    $button.className = 'off-btn';
-    $container.className = 'container dark-background';
-  } else if ($button.className === 'off-btn') {
+  if (isLightOn) {
+    isLightOn = false;
     $button.className = 'on-btn';
     $container.className = 'container light-background';
+  } else {
+    isLightOn = !isLightOn;
+    $button.className = 'off-btn';
+    $container.className = 'container dark-background';
   }
 }
 
