@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.roboto-font {
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+h2 {
+  text-align: center;
+}
+
+.modal-btn {
+  width: 20%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin: 5px;
+  font-size: 24px;
+  color: white;
+  background-color: #4a4ae9;
+}
+
+.survey-btn {
+  width: 35%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: white;
+  background-color: #eb5d5d;
+}
+
+.pop-up {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: flow;
+  box-shadow: 0 0 500px 100px #323232;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.height-500px {
+  height: 500px;
+}
+
+.margin-30px {
+  margin: 30px;
+}
+
+.margin-10px {
+  margin: 10px;
+}
