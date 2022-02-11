@@ -78,7 +78,7 @@ function renderPokemon(pokemon) {
   $pokemonTextDiv.appendChild($pokemonName);
 
   var $pokemonNumber = document.createElement('h3');
-  $pokemonNumber.textContent = pokemon.number;
+  $pokemonNumber.textContent = '#' + pokemon.number;
   $pokemonTextDiv.appendChild($pokemonNumber);
 
   var $pokemonDescription = document.createElement('p');
