@@ -1,8 +1,13 @@
+/*
+  - Variable names should relate to the amount it's holding. Plural/singular
+  - Function names should contain a verb
+*/
+
 var $tabContainer = document.querySelector('.tab-container');
 var $allTabs = document.querySelectorAll('.tab');
 var $allViews = document.querySelectorAll('.view');
 
-function tabHandler(event) {
+function handleViewSwap(event) {
   if (event.target.matches('.tab')) {
     for (var i = 0; i < $allTabs.length; i++) {
       if ($allTabs[i] === event.target) {
@@ -14,7 +19,7 @@ function tabHandler(event) {
   }
   if (event.target.matches('.tab')) {
     var $dataView = event.target.getAttribute('data-view');
-    for (var a = 0; i < $allViews.length; i++) {
+    for (var a = 0; a < $allViews.length; a++) {
       if ($allViews[a].getAttribute('data-view') === $dataView) {
         $allViews[a].className = 'view';
       } else {
@@ -24,4 +29,4 @@ function tabHandler(event) {
   }
 }
 
-$tabContainer.addEventListener('click', tabHandler);
+$tabContainer.addEventListener('click', handleViewSwap);
