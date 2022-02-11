@@ -1,11 +1,11 @@
 var $modalButton = document.querySelector('.modal-btn');
-var $popUp = document.querySelector('.pop-up');
+var $hiddenPop = document.querySelector('.hidden-pop');
 var $surveyButton = document.querySelector('.survey-btn');
 
 $modalButton.addEventListener('click', function () {
-  $popUp.className = 'row display-block';
+  $hiddenPop.className = 'row shown-pop';
 });
 
 $surveyButton.addEventListener('click', function () {
-  $popUp.className = 'row pop-up';
+  $hiddenPop.className = 'row hidden-pop';
 });
