@@ -1,12 +1,13 @@
 body {
   height: 100%;
   margin: 0;
+  font-family: Roboto, sans-serif;
   background-color: lightslategrey;
 }
 
 .container {
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
   background-color: white;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 .column-full {
-  width: 100%;
+  margin: auto;
 }
 
 .center-screen {
@@ -30,25 +31,26 @@ body {
 
 h1 {
   margin: 30px 0;
+  letter-spacing: 0.15rem;
 }
 
 .margin {
   margin: 40px 10px;
 }
 
-.green {
+.correct {
   color: lightgreen;
 }
 
-.red {
+.wrong {
   color: red;
 }
 
-.underline {
-  border-bottom: 2px solid black;
+.current-char {
+  border-bottom: 3px solid black;
   padding-bottom: 2px;
 }
 
 span {
-  white-space: pre;
+  white-space: nowrap;
 }
