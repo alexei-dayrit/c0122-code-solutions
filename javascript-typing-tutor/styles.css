@@ -16,7 +16,7 @@ body {
 }
 
 .column-full {
-  margin: auto;
+  width: 100%;
 }
 
 .center-screen {
@@ -44,6 +44,12 @@ h1 {
 
 .wrong {
   color: red;
+  border-bottom: 3px solid red;
+}
+
+.wrong-space {
+  background-color: red;
+  padding: 0.2rem;
 }
 
 .current-char {
