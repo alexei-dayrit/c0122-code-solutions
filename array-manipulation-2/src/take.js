@@ -2,19 +2,15 @@
 
 /*
   - Make new array variable
-  - Loop through array with condition i less than input count
-    - If length of array is strictly equal to 0,
-      - then return empty array
+  - Loop through array with condition i less than input count, and
+    i < array.length to account for an empty array
     - Push current index of array into new array variable
   - Return new array variable outside loop
 */
 
 function take(array, count) {
   var newArray = [];
-  for (var i = 0; i < count; i++) {
-    if (array.length === 0) {
-      return [];
-    }
+  for (var i = 0; i < count && i < array.length; i++) {
     newArray.push(array[i]);
   }
   return newArray;

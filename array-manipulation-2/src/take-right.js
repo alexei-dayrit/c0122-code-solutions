@@ -2,21 +2,19 @@
 
 /*
   - Create new array variable
+  - If count is greater than array length,
+    - then return array input
   - Loop through array, with initialization at array.length - count
-    - If count is greater than array length,
-      - then return array input
-    - Else push array at current index into new array
-  - Return new array
+  - Return new array outside loop
 */
 
 function takeRight(array, count) {
   var newArray = [];
+  if (count > array.length) {
+    return array;
+  }
   for (var i = array.length - count; i < array.length; i++) {
-    if (count > array.length) {
-      return array;
-    } else {
-      newArray.push(array[i]);
-    }
+    newArray.push(array[i]);
   }
   return newArray;
 }
