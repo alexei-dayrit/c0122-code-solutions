@@ -11,14 +11,19 @@
 */
 
 function omit(source, keys) {
-  var newObj = {};
+  var newObject = {};
   var storage = {};
-  for (var prop in source) {
-    if (prop === keys[0] || prop === keys[1]) {
-      storage[prop] = source[prop];
-    } else {
-      newObj[prop] = source[prop];
+  for (var i = 0; i < keys.length; i++) {
+    for (var prop in source) {
+      if (keys[i] !== prop) {
+        storage[prop] = source[prop];
+        console.log('storage:', storage);
+        console.log('newObj:', newObject);
+        break;
+      } else {
+        newObject[prop] = source[prop];
+      }
     }
   }
-  return newObj;
+  return newObject;
 }

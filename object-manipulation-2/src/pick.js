@@ -12,12 +12,22 @@
 
 function pick(source, keys) {
   var newObject = {};
-  for (var prop in source) {
-    if (keys[0] === prop) {
-      newObject[prop] = source[prop];
-    } else if (keys[1] === prop) {
-      newObject[prop] = source[prop];
+  for (var i = 0; i < keys.length; i++) {
+    for (var prop in source) {
+      if (source[prop] === undefined) {
+        continue;
+      } else if (keys[i] === prop) {
+        newObject[prop] = source[prop];
+      }
     }
   }
   return newObject;
 }
+// for (var prop in source) {
+//   if (keys[0] === prop) {
+//     newObject[prop] = source[prop];
+//   } else if (keys[1] === prop) {
+//     newObject[prop] = source[prop];
+//   }
+// }
+// return newObject;
