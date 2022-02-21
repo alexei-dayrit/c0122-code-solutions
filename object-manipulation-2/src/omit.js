@@ -15,15 +15,27 @@ function omit(source, keys) {
   var storage = {};
   for (var i = 0; i < keys.length; i++) {
     for (var prop in source) {
-      if (keys[i] !== prop) {
+      if (keys[i] === prop) {
         storage[prop] = source[prop];
-        console.log('storage:', storage);
-        console.log('newObj:', newObject);
         break;
-      } else {
+      } else if (keys[i] !== prop) {
         newObject[prop] = source[prop];
       }
     }
   }
   return newObject;
 }
+
+// function omit(source, keys) {
+//   var newObject = {};
+//   for (var i = 0; i < keys.length; i++) {
+//     for (var prop in source) {
+//       if (keys[i] === prop) {
+//         break;
+//       } else if (keys[i - 1] !== prop) {
+//         newObject[prop] = source[prop];
+//       }
+//     }
+//   }
+//   return newObject;
+// }
