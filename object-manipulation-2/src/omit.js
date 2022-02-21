@@ -8,34 +8,32 @@
       - Then add it to storage
     - Else new object at current prop is equal to current key
   - Return new object
+
+  // Problem is that key array isn't same order as the actual object
+  // So I need to check if current key is found in the ENTIRE object, not at just that
+  spot of the object
 */
 
 function omit(source, keys) {
+  // var newObject = {};
+  // for (var i = 0; i < keys.length; i++) {
+  //   for (var prop in source) {
+  //     if (keys[i] !== source[prop]) {
+  //       newObject[prop] = source[prop];
+  //     }
+  //   }
+  // }
+  // return newObject;
   var newObject = {};
-  var storage = {};
-  for (var i = 0; i < keys.length; i++) {
-    for (var prop in source) {
-      if (keys[i] === prop) {
-        storage[prop] = source[prop];
-        break;
-      } else if (keys[i] !== prop) {
-        newObject[prop] = source[prop];
+  var allKeys = Object.keys(source);
+  for (var prop in source) {
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i] !== allKeys[i]) {
+        newObject[keys[i]] = source[prop];
+        console.log('object:', newObject[keys[i]]);
+        console.log('source[prop]:', source[prop]);
       }
     }
   }
   return newObject;
 }
-
-// function omit(source, keys) {
-//   var newObject = {};
-//   for (var i = 0; i < keys.length; i++) {
-//     for (var prop in source) {
-//       if (keys[i] === prop) {
-//         break;
-//       } else if (keys[i - 1] !== prop) {
-//         newObject[prop] = source[prop];
-//       }
-//     }
-//   }
-//   return newObject;
-// }
