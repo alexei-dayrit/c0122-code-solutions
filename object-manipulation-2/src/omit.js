@@ -4,7 +4,7 @@
   - Create newObj variable
   - Create storage variable
   - Loop through source object
-    - If current prop is equal to first or second key,
+    - If current prop is equal to keys array at i,
       - Then add it to storage
     - Else new object at current prop is equal to current key
   - Return new object
