@@ -4,4 +4,4 @@ function sayHello() {
   $msg.textContent = 'Hello There';
 }
 
-setTimeout(() => { sayHello(); }, 2000);
+setTimeout(sayHello, 2000);
