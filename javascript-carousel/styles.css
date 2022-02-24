@@ -42,14 +42,19 @@ i {
   padding: 0.5rem;
 }
 
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
 .dot-box {
   padding: 1rem;
 }
 
-.left-arrow,
-.right-arrow,
-.dot-box > i {
+.dot {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 img {

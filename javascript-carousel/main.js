@@ -5,19 +5,15 @@ var $totalImages = $allImages.length;
 var $dotContainer = document.querySelector('.dot-container');
 var $allDots = document.querySelectorAll('.dot');
 var currentImage = 0;
-setInterval(rotateImages, 3000);
 
 function changeCurrentImage() {
-  // make all slides hidden
   for (var i = 0; i < $allImages.length; i++) {
     $allImages[i].setAttribute('class', 'hidden carousel-item');
   }
-  // reveal only slide at currentImage count
   $allImages[currentImage].setAttribute('class', 'visible carousel-item');
 }
 
 function changeDots(event) {
-  // clicked dot changes image
   if (event.target.matches('.dot')) {
     // make all dots hollow, change all images to hidden
     for (var i = 0; i < $allDots.length; i++) {
@@ -32,11 +28,11 @@ function changeDots(event) {
       }
     }
   }
+  clearInterval(intervalId);
 }
 $dotContainer.addEventListener('click', changeDots);
 
 function goToPrevImage() {
-  // if at beginning
   if (currentImage === 0) {
     currentImage = $totalImages - 1;
   } else {
@@ -44,10 +40,11 @@ function goToPrevImage() {
   }
   cycleDots();
   changeCurrentImage();
+  clearInterval(intervalId);
+  intervalId = setInterval(rotateImages, 4000);
 }
 
 function goToNextImage() {
-  // if at end:
   if (currentImage === $totalImages - 1) {
     currentImage = 0;
   } else {
@@ -55,26 +52,32 @@ function goToNextImage() {
   }
   cycleDots();
   changeCurrentImage();
+  clearInterval(intervalId);
+  intervalId = setInterval(rotateImages, 4000);
 }
 
 $prevImage.addEventListener('click', goToPrevImage);
 $nextImage.addEventListener('click', goToNextImage);
 
 function cycleDots() {
-  // make all dots hollow
   for (var i = 0; i < $allDots.length; i++) {
     $allDots[i].setAttribute('class', 'dot far fa-circle');
   }
-  // fill in dot for currentImage
   $allDots[currentImage].setAttribute('class', 'dot fas fa-circle');
+  clearInterval(intervalId);
+  intervalId = setInterval(rotateImages, 4000);
 }
 
 function rotateImages() {
+  currentImage++;
   if (currentImage < 5) {
     changeCurrentImage();
     cycleDots();
-    currentImage++;
+    clearInterval(intervalId);
   } else {
-    currentImage = 0;
+    currentImage = -1;
+    clearInterval(intervalId);
   }
 }
+
+var intervalId = setInterval(rotateImages, 4000);
