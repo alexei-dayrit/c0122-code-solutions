@@ -15,7 +15,6 @@ function changeCurrentImage() {
 
 function changeDots(event) {
   if (event.target.matches('.dot')) {
-    // make all dots hollow, change all images to hidden
     for (var i = 0; i < $allDots.length; i++) {
       if ($allDots[i] === event.target) {
         $allDots[i].className = 'dot fas fa-circle';
@@ -23,13 +22,16 @@ function changeDots(event) {
           $allImages[a].setAttribute('class', 'hidden carousel-item');
         }
         $allImages[i].setAttribute('class', 'visible carousel-item');
+        currentImage = i;
       } else {
         $allDots[i].className = 'dot far fa-circle';
       }
     }
   }
   clearInterval(intervalId);
+  intervalId = setInterval(rotateImages, 4000);
 }
+
 $dotContainer.addEventListener('click', changeDots);
 
 function goToPrevImage() {
@@ -73,10 +75,10 @@ function rotateImages() {
   if (currentImage < 5) {
     changeCurrentImage();
     cycleDots();
-    clearInterval(intervalId);
   } else {
     currentImage = -1;
     clearInterval(intervalId);
+    intervalId = setInterval(rotateImages, 4000);
   }
 }
 
