@@ -6,35 +6,35 @@
   - Loop through
 
 */
-// might have to split by word first?
 function isAnagram(firstString, secondString) {
   var splitFirstStr = firstString.split('');
   var splitSecondStr = secondString.split('');
-  console.log('split', splitFirstStr);
-  var firstArr = [];
+  console.log('split first string:', splitFirstStr);
   var secondArr = [];
-
   for (var i = 0; i < splitSecondStr.length; i++) {
     if (splitSecondStr[i] !== ' ') {
       secondArr.push(splitSecondStr[i]);
-      firstArr.push(splitFirstStr[i]);
     }
   }
-  var firstCleanArr = [];
+  var firstArr = [];
   for (var a = 0; a < splitFirstStr.length; a++) {
-    if (splitFirstStr[a] !== undefined) {
-      firstCleanArr.push(firstArr[a]);
+    if (splitFirstStr[a] === undefined || splitFirstStr[a] === ' ') {
+      break;
+      // splice???
+    } else {
+      firstArr.push(splitFirstStr[a]);
     }
   }
-
-  console.log('first:  ', firstCleanArr);
-  console.log('second:  ', secondArr);
+  // WRONG: SCHOOL returns true and DEBIT CARD returns false
+  // BOTH have first array losing second word, in general first array loses second word
+  console.log('first NO SPACE: ', firstArr);
+  console.log('second NO SPACE: ', secondArr);
 
   var noSpaceFirst = firstArr.sort().join('');
   var noSpaceSecond = secondArr.sort().join('');
 
-  // console.log('firstArr: ', noSpaceFirst);
-  // console.log('secondArr: ', noSpaceSecond);
+  // console.log('first SORTED: ', noSpaceFirst);
+  // console.log('second SORTED: ', noSpaceSecond);
   if (noSpaceFirst === noSpaceSecond) {
     return true;
   } else {
