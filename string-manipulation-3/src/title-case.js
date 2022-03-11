@@ -1,51 +1,79 @@
 /* exported titleCase */
 
-/* TASKS:
-  - Capitalize the first word of the title and of any subtitle.
-  - Capitalize all “major” words(nouns, verbs, adjectives, adverbs, and pronouns) in the title, including the second part of hyphenated major words(e.g., Self - Report not Self - report).
-  - Capitalize all words of four letters or more.
-*/
-// something like if current word is less than certian number count??
-
 /*
- Loop through string,
- - if there's a space before or after then capitalize next word
-  - unless it's a preposition
- - If there's a hyphen capitalize next word
+  - Make empty string variable to hold answer
+  - Make empty string var to hold current word of loop
+  - Make array variable to hold capitalized words
+  - Make array var for hypen words
+  - Make var that holds the input string split by each word into an array and make everything lowercase
+  - Loop through words array
+    - If current word is javascript then,
+      - Capitalize first letter and the index of 's'
+      - Push capitalized word into capitalized array
+    - If current word is API then,
+      - Capitalize all letters
+      - Push capitalized word into capitalized array
+    - If current index is 0 then,
+      - Push capitalized word into capitalized array
+    - If previous word includes ':' then,
+      - capitalize first letter then push word into capitalized array
+    - If current word includes '-' then,
+      - Loop through current word,
+        - If previous letter is === '-' then,
+          - Capitalize current letter and push into hyphenWord array
+        - If current letter is the first index then,
+          - Capitalize current letter and push into hyphenWord array
+        - Else, push current letter into hyphenWord array
+      - Push hyphenWord joined by empty string into capitalized array
+    - If current word === in, for, the, of, to, on, and... then,
+      - Push word into capitalized array
+    - Else, capitalize first letter and push word into capitalized array
+  - Make answer string equal to capitalized array joined by space
+  - Return answer string
 */
 
 function titleCase(string) {
-  // var split = string.split(' ');
-  // console.log('split', split);
-  // var word1 = split[0].toLowerCase();
-  // console.log(word1);
-  // console.log(word1[0].toUpperCase());
-  // for (var i = 0; i < split.length; i++) {
-  // console.log(string[i]);
-  // var lowerCased = split[i].toLowerCase();
-  // console.log('lower', lowerCased);
-  // var upperCased = lowerCased[i][0].toUpperCase() + lowerCased.slice(1);
-  // console.log('upper:', upperCased);
+  var answerString = '';
+  var capitalizedWord = '';
+  var capitalizedArr = [];
+  var words = string.toLowerCase().split(' ');
+  for (var i = 0; i < words.length; i++) {
+    if (words[i] === 'javascript' || words[i] === 'javascript:') {
+      capitalizedWord = words[i][0].toUpperCase() + words[i].slice(1, 4) + words[i][4].toUpperCase() + words[i].slice(5);
+      capitalizedArr.push(capitalizedWord);
+    } else if (words[i] === 'api') {
+      capitalizedWord = words[i].toUpperCase();
+      capitalizedArr.push(capitalizedWord);
+    } else if (i === 0) {
+      capitalizedWord = words[i][0].toUpperCase() + words[i].slice(1);
+      capitalizedArr.push(capitalizedWord);
+    } else if (capitalizedArr[i - 1].includes(':')) {
+      capitalizedWord = words[i][0].toUpperCase() + words[i].slice(1);
+      capitalizedArr.push(capitalizedWord);
+    } else if (words[i].includes('-')) {
+      var letter = '';
+      var hyphenWord = [];
+      for (var a = 0; a < words[i].length; a++) {
+        if (words[i][a - 1] === '-') {
+          letter = words[i][a].toUpperCase();
+          hyphenWord.push(letter);
+        } else if (a === 0) {
+          letter = words[i][a].toUpperCase();
+          hyphenWord.push(letter);
+        } else {
+          letter = (words[i][a]);
+          hyphenWord.push(letter);
+        }
+      }
+      capitalizedArr.push(hyphenWord.join(''));
+    } else if (words[i] === 'in' || words[i] === 'for' || words[i] === 'of' || words[i] === 'the' ||
+      words[i] === 'to' || words[i] === 'on' || words[i] === 'and') {
+      capitalizedArr.push(words[i]);
+    } else {
+      capitalizedWord = words[i][0].toUpperCase() + words[i].slice(1);
+      capitalizedArr.push(capitalizedWord);
+    }
+  }
+  answerString = capitalizedArr.join(' ');
+  return answerString;
 }
-
-// FIRST ATTEMPT
-// function titleCase(string) {
-//   var splitWordsArr = string.split(' ');
-//   var lowerCasedArr = [];
-//   var upperCasedArr = [];
-//   for (var i = 0; i < splitWordsArr.length; i++) {
-//     var lowerCased = splitWordsArr[i].toLowerCase();
-//     // lowerCasedArr.push(lowerCased);
-//     if (lowerCased.length > 3) {
-//       var capitalized = lowerCased[0].toUpperCase() + lowerCased.slice(1);
-//       upperCasedArr.push(capitalized);
-//     }
-//   }
-// console.log('upperCased array:', upperCasedArr);
-// console.log('lowerCased array:', lowerCasedArr);
-// var joinedLower = lowerCasedArr.join(' ');
-// console.log('joinedLower words:', joinedLower);
-
-// console.log('lowerCased words:', lowerCased);
-// console.log('capitalized words:', capitalized);
-// }
