@@ -1,0 +1,878 @@
+    1  exit
+    2  whoami
+    3  git config --global user.name "Alexei Dayrit"
+    4  git config --global user.email "alexeigdayrit@gmail.com"
+    5  git config --global --list
+    6  exit
+    7  whoami
+    8  exit
+    9  cd repos
+   10  cd c0122-code-solutions/
+   11  git switch string-manipulation-3
+   12  git status
+   13  git switch string-manipulation-3
+   14  git status
+   15  cd
+   16  cd chinay-project
+   17  ls
+   18  dev-exit
+   19  exit
+   20  cd repos
+   21  cd c0122-code-solutions/
+   22  git status
+   23  whoami
+   24  git switch master
+   25  http https://example.com
+   26  http --verbose https://example.com
+   27  git switch http-messages
+   28  git status
+   29  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   30  http --body GET https://example.com > http-messages/index.html
+   31  git status
+   32  git add http-messages/
+   33  git status
+   34  git commit -m "Completed http-messages exercise."
+   35  git push origin http-messages
+   36  git status
+   37  git add string-manipulation-3/is-anagram.js
+   38  git add string-manipulation-3/src/is-anagram.js 
+   39  git add string-manipulation-3/src/title-case.js 
+   40  git commit -m "In progress..."
+   41  git commit -m "In progress..." --no-verify
+   42  git status
+   43  git switch masater
+   44  git switch master
+   45  git branch javascript-ajax
+   46  git switch javascript-ajax
+   47  git status
+   48  git add javascript-ajax/
+   49  git status
+   50  git commit -m "Completed javascript-ajax exercise."
+   51  git push origin javascript-ajax
+   52  git status
+   53  git switch master
+   54  git switch javascript-ajax
+   55  git switch master
+   56  git status
+   57  git switch master
+   58  git add string-manipulation-3/src/is-anagram.js 
+   59  git add string-manipulation-3/src/title-case.js 
+   60  git status
+   61  git add string-manipulation-3/src/title-case.js 
+   62  git status
+   63  git commit -m "Completed is-anagram.js. Still in progress with title-case.js"
+   64  git add string-manipulation-3/src/title-case.js 
+   65  git status
+   66  git commit -m "Completed is-anagram.js. Still in progress with title-case.js"
+   67  git status
+   68  git add string-manipulation-3/src/title-case.js 
+   69  git status
+   70  git commit -m "Completed is-anagram.js. Still in progress with title-case.js"
+   71  git status
+   72  git switch master
+   73  cd ..
+   74  cd 
+   75  http --verbose https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple
+   76  cd repos
+   77  cd c0122-code-solutions/
+   78  git status
+   79  cd javascript-ajax
+   80  git switch javascript-ajax x
+   81  git switch javascript-ajax
+   82  http https://opentdb.com/api.php?amount=5
+   83  git status
+   84  git switch master
+   85  git pull origin master
+   86  git status
+   87  cd ..
+   88  cd
+   89  git status
+   90  cd repos
+   91  dev-env
+   92  exit
+   93  cd repos
+   94  git clone git@github.com:alexei-dayrit/ajax-project.git
+   95  cd ajax-project
+   96  git status
+   97  npm ci
+   98  GIT STATUS
+   99  git pull origin master
+  100  git branch issue-1-create-game
+  101  git switch issue-1-create-game
+  102  git status
+  103  git add css/layout.css css/styles.css index.html images/brand-icon-32px.png 
+  104  git status
+  105  git commit -m "Add header with brand-logo and brand title."
+  106  git status
+  107  git add css/styles.css 
+  108  git commit -m "Add header with brand-logo and brand title."
+  109  cd repos
+  110  cd ajax-project/
+  111  git status
+  112  git push origin issue-1-create-game
+  113  git status
+  114  git add css/styles.css index.html credits.html images/quotes-credit-16px.png images/quotes-credit-24px.png 
+  115  git status
+  116  git commit -m "Add footer with credits page, GitHub logo, and contact logo. #1"
+  117  git push origin issue-1-create-game
+  118  cd repos
+  119  cd ajax-project
+  120  git status
+  121  git add css/styles.css index.html 
+  122  git status
+  123  git commit -m "Add fonts and colors to CSS. #1"
+  124  git push origin issue-1-create-game
+  125  git status
+  126  git add index.html
+  127  git commit -m "Add `div[data-view='create-game'] to the HTML. #1"
+  128  git status
+  129  git status
+  130  git commit -m "Add `div[data-view='create-game']` to the HTML. #1"
+  131  git status
+  132  git push origin issue-1-create-game
+  133  git status
+  134  git add css/layout.css css/styles.css index.html
+  135  git status
+  136  git commit -m "Add form for creating the game to div of data-view=['create-game']. #1"
+  137  git push origin issue-1-create-game
+  138  git status
+  139  GIT STATUS
+  140  git status
+  141  git add css/layout.css css/styles.css index.html
+  142  git status
+  143  git commit -m "Add input buttons for all categories from trivia API. #1"
+  144  git status
+  145  git push origin issuee-1-create-game
+  146  git push origin issue-1-create-game
+  147  git status
+  148  git add css/styles.css css/layout.css index.html
+  149  git status
+  150  git commit -m "Ensure that the form looks nice on both mobile and desktop screens. #1"
+  151  git push origin issue-1-create-game
+  152  http https://opentdb.com/api_category.php
+  153  http https://opentdb.com/api_count.php?category=15
+  154  http https://opentdb.com/api_count_global.php
+  155  http https://opentdb.com/api.php?amount=10&encode=url3986
+  156  git status
+  157  git add -A
+  158  git status
+  159  git add js/main.js 
+  160  git commit -m "Listen for in 'input' events on the category buttons. #1"
+  161  cd repos
+  162  cd ajax-project/
+  163  git status
+  164  git add js/main.js
+  165  git status
+  166  git commit -m "Listen for in 'input' events on the category buttons. #1"
+  167  git push origin issue-1-create-game
+  168  git status
+  169  git add -A
+  170  git status
+  171  git commit -m "Add input buttons for difficulty levels. #1"
+  172  git status
+  173  git push origin issue-1-create-game
+  174  git status
+  175  git add css/styles.css index.html js/main.js 
+  176  git status
+  177  git commit -m "Listen for 'click' events on category buttons to trigger a view swap to difficulty buttons. #1"
+  178  git status
+  179  git push origin issue-1-create-game
+  180  http https://opentdb.com/api_category.php
+  181  git status
+  182  http https://opentdb.com/api_category.php
+  183  https://opentdb.com/api.php?amount=5&category=15&difficulty=medium
+  184  http https://opentdb.com/api.php?amount=5&category=15&difficulty=medium
+  185  http https://opentdb.com/api_category.php
+  186  git status
+  187  git add -A
+  188  git status
+  189  git commit -m "PAssign difficulty buttons to store difficulty level from trivia API. #1"
+  190  git status
+  191  git add js/data.js 
+  192  git commit -m "PAssign difficulty buttons to store difficulty level from trivia API. #1" --no-verify
+  193  git status
+  194  git push origin issue-1-create-game
+  195  http https://opentdb.com/api_category.php
+  196  git status
+  197  git add -A
+  198  git status
+  199  git add js/main.js 
+  200  git commit -m "Assign difficulty buttons to store difficulty level from trivia API. #1"
+  201  git status
+  202  git add js/main.js 
+  203  git commit -m "Assign difficulty buttons to store difficulty level from trivia API. #1"
+  204  git commit -m "Assign difficulty buttons to store difficulty level from trivia API. #1" --no-verify
+  205  git push origin issue-1-create-game
+  206  http https://opentdb.com/api_token.php?command=request
+  207  git status
+  208  git add js/main.js 
+  209  git commit -m "Assign category buttons to store category ID from trivia API. Retrieve and set token session from trivia API. #1"
+  210  git commit -m "Assign category buttons to store category ID from trivia API. Retrieve and set token session from trivia API. #1" --no-verify
+  211  git push origin issue-1-create-game
+  212  git status
+  213  git add -A
+  214  git commit -m "Confirm that user interface looks nice on both mobile and desktop screens. #1"
+  215  git commit -m "Confirm that user interface looks nice on both mobile and desktop screens. #1" --no-verify
+  216  git push origin issue-1-create-game
+  217  git status
+  218  git restore
+  219  git restore css/layout.css css/styles.css
+  220  git status
+  221  git add css/layout.css 
+  222  git commit -m "Remove all CSS styling with no effect. Confirm functionality with no errors. #1"
+  223  git status
+  224  git push origin issue-1-create-game
+  225  git status
+  226  git add -A
+  227  git commit -m "Made changes so that session token is properly retrieved. #1"
+  228  git status
+  229  git push origin issue-1-create-game
+  230  git status
+  231  git add js/main.js 
+  232  git commit -m "Moved xhrGame variable to be inside function block it correlates to. #1"
+  233  git push origin issue-1-create-game
+  234  git status
+  235  git switch master
+  236  git pull origin master
+  237  git branch issue-2-take-quiz
+  238  git swtich issue-2-take-quiz
+  239  git switch issue-2-take-quiz
+  240  git status
+  241  git add -A
+  242  git commit -m "Create DOM tree for quiz length view. #2"
+  243  git status
+  244  git commit -m "Create DOM tree for quiz length view. #2" --no-verify
+  245  git status
+  246  git push origin issue-2-take-quiz
+  247  git status
+  248  git add js/main.js
+  249  git status
+  250  git commit -m "Listen for 'click' events on difficulty buttons to trigger a view swap to quiz length screen. #2"
+  251  git commit -m "Listen for 'click' events on difficulty buttons to trigger a view swap to quiz length screen. #2" --no-verify
+  252  git push origin issue-2-take-quiz
+  253  docker version
+  254  $ docker version
+  255  git status
+  256  cd ..
+  257  docker version
+  258  $docker version
+  259  $ docker version
+  260  exit
+  261  cd repos
+  262  cd ajax-project/
+  263  git status
+  264  git add js/main.js
+  265  git commit -m "Assign length buttons to store quiz question amount from trivia API. #2"
+  266  git commit -m "Assign length buttons to store quiz question amount from trivia API. #2" --no-verify
+  267  git push origin issue-2-take-quiz
+  268  git status
+  269  git add -A
+  270  git commit -m "Create DOM tree function for quiz type view. #2" --no-verify
+  271  git push origin issue-2-take-quiz
+  272  git status
+  273  git add js/main.js 
+  274  git commit -m "Listen for click events on quiz type buttons to trigger a view swap to quiz length screen. #2"
+  275  git commit -m "Listen for click events on quiz type buttons to trigger a view swap to quiz length screen. #2" --no-verify
+  276  git status
+  277  git add -A
+  278  git commit -m "Assign type buttons to store whether questions are multiple choice or true/false from trivia API. #2"
+  279  git commit -m "Assign type buttons to store whether questions are multiple choice or true/false from trivia API. #2" --no-verify
+  280  git push origin issue-2-take-quiz
+  281  git status
+  282  git add index.html 
+  283  git commit -m "Ensure 'BEGIN' button submits form and retrieves data. #2" --no-verify
+  284  git push origin issue-2-take-quiz
+  285  git status
+  286  git add css/layout.css css/styles.css 
+  287  git status
+  288  git add -A
+  289  git status
+  290  git commit -m "Make footer stick to bottom of page and adjust CSS accordingly. #2" --no-verify
+  291  git push origin issue-2-take-quiz
+  292  git status
+  293  git add -A
+  294  git status
+  295  git add -A
+  296  git status
+  297  git commit -m "Add 'click' event on brand title to bring back to category select and reset form. #2" --no-verify
+  298  git push origin issue-2-take-quiz
+  299  git status
+  300  git add -A
+  301  git commit -m "Confirm that UIlooks nice on both mobile and desktop screens. #2" --no-verify
+  302  git status
+  303  git add css/styles.css 
+  304  git commit -m "Remove all CSS properties that have no effect. #2" --no-verify
+  305  git push origin issue-2-take-quiz
+  306  git status
+  307  git add js/main.js
+  308  git commit -m "Confirm that all previous functionality still works without errors and remove console.logs. #2"
+  309  git push origin issue-2-take-quiz
+  310  git status
+  311  GIT STATUS
+  312  git status
+  313  git add -A
+  314  git commit -m "Removed DOM renderings, instead made it all in index.html. #1"
+  315  git status
+  316  git add js/main.js
+  317  git commit -m "Removed DOM renderings, instead made it all in index.html. #1"
+  318  git push origin issue-2-take-quiz
+  319  git status
+  320  git branch -m issue-1-continuation
+  321  git status
+  322  git add js/main.js
+  323  git commit -m "Renamed branch. #1"
+  324  git push origin issue-1-continuation
+  325  git status
+  326  git switch master
+  327  git pull origin master
+  328  git branch --list
+  329  git branch issue-2-user-can-answer-question
+  330  git switch issue-2-user-can-answer-question
+  331  git status
+  332  git add -A
+  333  git commit -m "Create DOM tree for quiz question from API. #2"
+  334  git commit -m "Create DOM tree for quiz question from API. #2" --no-verify
+  335  git push origin issue-2-user-can-answer-question
+  336  git status
+  337  git add -A
+  338  git commit -m "Render multiple choice quiz question when form is submitted. #2" --no-verify
+  339  git push origin issue-2-user-can-answer-question
+  340  git status
+  341  git add index.html js/main.js
+  342  git status
+  343  git committ -m "Create new form for user quiz. #2" --no-verify
+  344  git commit -m "Create new form for user quiz. #2" --no-verify
+  345  git push origin issue-2-user-can-answer-question
+  346  git status
+  347  git add -A
+  348  git commit -m "Randomize how quiz questions are displayed to user. #2" --no-verify
+  349  git status
+  350  git add -A
+  351  git commit -m "Use global data model to store results from trivia API. #2"
+  352  git commit -m "Use global data model to store results from trivia API. #2" --no-verify
+  353  git push origin issue-2-user-can-answer-question
+  354  git status
+  355  git add -A
+  356  git status
+  357  git commit -m "Add 'click' event listener for answer buttons. #2" --no-verify
+  358  git push origin issue-2-user-can-answer-questions
+  359  git push origin issue-2-user-can-answer-question
+  360  git status
+  361  git add js/main.js
+  362  git commit -m "Create function to check if user selection is correct. #2" --no-verify
+  363  git push origin issue-2-user-can-answer-question
+  364  git status
+  365  git add js/main.js
+  366  git commit -m "Render true or false quiz question when game form is submitted. #2" --no-verify
+  367  git push origin issue-2-user-can-answer-question
+  368  git status
+  369  git add -A
+  370  git status
+  371  git commit -m "Create function to check if user selection for true/false question is correct. #2"
+  372  git commit -m "Create function to check if user selection for true/false question is correct. #2" --no-verify
+  373  git push origin issue-2-user-can-answer-question
+  374  git status
+  375  git add -A
+  376  git commit -m "Create DOM tree for correct or incorrect text. #2" --no-verify
+  377  git push origin issue-2-user-can-answer-question
+  378  git status
+  379  git add -A
+  380  git commit -m "Display whether user answered correctly or incorrectly. #2" --no-verify
+  381  git push origin issue-2-user-can-answer-question
+  382  git status
+  383  git add -A
+  384  git commit -m "Ensure buttons are styled based on correct and incorrect user choice. #2" --no-verify
+  385  git status
+  386  git add -A
+  387  git commit -m "Confirm that user interface looks natural on both mobile and desktop screens. #2" --no-verify
+  388  git push origin issue-2-user-can-answer-question
+  389  git status
+  390  git add -A
+  391  git commit -m "Confirm that all previous functionaity still works without errors. #2"
+  392  git status
+  393  git add js/main.js 
+  394  git commit -m "Confirm that all previous functionaity still works without errors. #2"
+  395  git push origin issue-2-user-can-answer-question
+  396  git status
+  397  git switch master
+  398  git pull origin master
+  399  git status
+  400  git branch issue-3-take-quiz
+  401  git switch issue-3-take-quiz
+  402  git status
+  403  git add -A
+  404  git commit -m "Create a function to delete DOM trees. #3" --no-verify
+  405  git push origin issue-3-take-quiz
+  406  git status
+  407  git add js/main.js
+  408  git status
+  409  git commit -m "Ensure previous question's DOM tree is deleted. #3" --no-verify
+  410  git push origin issue-3-take-quiz
+  411  GIT STATUS
+  412  git status
+  413  git add js/main.js
+  414  git commit -m "Add DOM deletion when brand title is clicked. #3" --no-verify
+  415  git push origin issue-3-take-quiz
+  416  git status
+  417  git add js/main.js
+  418  git commit -m "Add setTimeout() to do DOM tree deletion. #3" --no-verify
+  419  git push origin issue-3-take-quiz
+  420  git status
+  421  git add -A
+  422  git status
+  423  git commit -m "Add render function for quiz question. #3" --no-verify
+  424  git push origin issue-3-take-quiz
+  425  git status
+  426  git add js/main.js
+  427  git commit -m "Clear data model when brand title is clicked. #3" --no-verify
+  428  git push origin issue-3-take-quiz
+  429  git status
+  430  git add js/main.js
+  431  git status
+  432  git commit -m "Reset gquiz form when brand title is clicked. #3" --no-verify
+  433  git push origin issue-3-take-quiz
+  434  git status
+  435  git add -A
+  436  git commit -m "Create function that renders next question. #3" --no-verify
+  437  git status
+  438  git add -A
+  439  git commit -m "Confirm that user interface looks natural on both mobile and desktop screens. #3" --no-verify
+  440  git push origin issue-3-take-quiz
+  441  git status
+  442  git commit --allow-empty -m "Remove all CSS properties that have no effect. #3" --no-verify
+  443  git push origin issue-3-take-quiz
+  444  git status
+  445  git add -A
+  446  git commit -m "Confirm that all previous functionality still works without errors. #3"
+  447  git push origin issue-3-take-quiz
+  448  git status
+  449  git switch master
+  450  git pull origin master
+  451  git status
+  452  git branch issue-4-see-score
+  453  git switch issue-4-see-score
+  454  git status
+  455  git add -A
+  456  git commit -m "Add properties for correct and incorrect answers to the data model. #4" --no-verify
+  457  git push origin issue-4-see-score
+  458  git status
+  459  git add -A
+  460  git status
+  461  git commit -m "Create function that calculates total score. #4" --no-verify
+  462  git push origin issue-4-see-score
+  463  git status
+  464  git add -A
+  465  git commit -m "Add render function for quiz message. #4" --no-verify
+  466  git push origin issue-4-see-score
+  467  git status
+  468  git add -A
+  469  git commit -m "Add render function for quiz score. #4" --no-verify
+  470  git push origin issue-4-see-score
+  471  git status
+  472  git add -A
+  473  git commit -m "Ensure score is displayed after final question is answered. #4" --no-verify
+  474  git status
+  475  git add -A
+  476  git commit -m "Ensure brand title click removes score. #4 --no-verify
+  477  git commit -m "Ensure brand title click removes score. #4" --no-verify
+  478  git push origin issue-4-see-score
+  479  git stauts 
+  480  git status
+  481  git add -A
+  482  git commit -m "Confirm that user interface looks natural on both mobile and desktop screens. #4" --no-verify
+  483  git push origin issue-4-see-score
+  484  git status
+  485  git add -A
+  486  git commit -m "Remove all CSS properties that have no effect. #4"
+  487  git status
+  488  git push origin issue-4-see-score
+  489  git status
+  490  git add -A
+  491  git commit -m "Confirm that all previous functionality still works without errors. #4"
+  492  git status
+  493  git push origin issue-4-see-score
+  494  git status
+  495  git add js/main.js 
+  496  git status
+  497  git commit -m "Checked for erros. #4"
+  498  git push origin issue-4-see-score
+  499  git status
+  500  git add -A
+  501  git commit -m "Changed quiz length choice back to 10. #4"
+  502  git push origin issue-4-see-score
+  503  git status
+  504  git add js/main.js
+  505  git commit -m "Added disabled attribute to 'begin' button once it's clicked. #4"
+  506  git push origin issue-4-see-score
+  507  git status
+  508  git add js/main.js
+  509  git status
+  510  git commit -m "DDecoded HTML entities for multiple choice answers. #4" 
+  511  git status
+  512  git push origin issue-4-see-score
+  513  git status
+  514  git restore css/layout.css
+  515  git status
+  516  git add js/main.js
+  517  git commit -m "Reenabled 'begin' submit button when brand title is clicked. #4"
+  518  git push orign issue-4-see-score
+  519  git push origin issue-4-see-score
+  520  git status
+  521  git switch master
+  522  git pull origin master
+  523  git status
+  524  git branch issue-5-set-time-limit
+  525  git switch issue-5-set-time-limit
+  526  git status
+  527  git add -A
+  528  git commit -m "Ensure answer buttons can only be clicked once by the user. #5" --no-verify
+  529  git push origin issue-5-set-time-limit
+  530  git status
+  531  gits status
+  532  git status
+  533  git add -A
+  534  git commit -m "Add a new section on the game form to allow user to select time limit. #5" --no-verify
+  535  git push origin issue-5-set-time-limit
+  536  git status
+  537  git add -A
+  538  git commit -m "Added HTML for countdown timer and ensured button text wraps. #5" --no-verify
+  539  git push origin issue-5-set-time-limit
+  540  git status
+  541  git add -A
+  542  git commit -m "Create a function that counts down for each question. #5" --no-verify
+  543  git push origin issue-5-set-time-limit
+  544  git status
+  545  git add -A
+  546  git commit -m "Create a function that counts down for each question and add active color to begin button. #5" --no-verify
+  547  git push origin issue-5-set-time-limit
+  548  git status
+  549  git add -A
+  550  git commit -m "Change question count to match trivia API database. #5" --no-verify
+  551  git push origin issue-5-set-time-limit
+  552  git status
+  553  git add -A
+  554  git commit -m "Reset timer before new question is displayed. #5" --no-verify
+  555  git push origin issue-5-set-time-limit
+  556  git status
+  557  git add -A
+  558  git commit -m "Added time's up message and removed clicks when timer is 0. #5" --no-verify
+  559  git push origin issue-5-set-time-limit
+  560  git status 
+  561  git add -A
+  562  git commit -m "Ensure correct is highlighted when timer is 0. #5" --no-verify
+  563  git push origin issue-5-set-time-limit
+  564  git status
+  565  git add -A
+  566  git commit -m "Trigger view swap after correct answer is displayed. #5" --no-verify
+  567  git push origin issue-5-set-time-limit
+  568  git status
+  569  git add -A
+  570  git status
+  571  git add -A
+  572  git commit -m "Confirm that user interface looks natural on both mobile and desktop screens. #5" --no-verify
+  573  git push origin issue-5-set-time-limit
+  574  git status
+  575  git add -A
+  576  git commit -m "Changed order of user select options and added function to default to 'any' difficulty and type if not enough API questions. #5" --no-verify
+  577  git push origin issue-5-set-time-limit
+  578  git status
+  579  git add -A
+  580  git commit -m "Remove all CSS properties that have no effect. #5" 
+  581  git status
+  582  git add -A
+  583  git commit -m "Remove all CSS properties that have no effect. #5" --no-verify
+  584  git push origin issue-5-set-time-limit
+  585  git status
+  586  git add -A
+  587  git commit -m "Confirm that all previous functionality still works. Clean up bugs. #5" 
+  588  git push origin issue-5-set-time-limit
+  589  git status
+  590  git add -A
+  591  git commit -m "Check for errors. #5"
+  592  git push origin issue-5-set-time-limit
+  593  git status
+  594  git add js/main.js 
+  595  git commit -m "Added event delegation to HTML header. #5" 
+  596  git push origin issue-5-set-time-limit
+  597  http https://opentdb.com/api_count_global.php
+  598  http https://opentdb.com/api_count.php?category=10
+  599  git status
+  600  git add -A
+  601  git commit -m "Added setTimeout to category select and added loading text. #5"
+  602  git push origin issue-5-set-time-limit
+  603  git switch master
+  604  git pull origin master
+  605  git status
+  606  git add -A
+  607  git commit -m "Changed submit button sizing to be fully visible on mobile."
+  608  git push origin master
+  609  git status
+  610  cd ..
+  611  cd c0122-code-solutions/
+  612  git switch master
+  613  git switch array-manipulation-3
+  614  git branch array-manipulation-3
+  615  git switch array-manipulation-3
+  616  git status
+  617  git add array-manipulation-3
+  618  git status
+  619  git commit -m "Completed array-manipulation-3 practice."
+  620  git push origin array-manipulation-3
+  621  git status
+  622  git switch master
+  623  git pull origin master
+  624  git branch object-manipulation-3
+  625  git switch object-manipulation-3
+  626  git status
+  627  git switch string-manipulation-3
+  628  git status
+  629  git add string-manipulation-3/src/title-case.js 
+  630  git status
+  631  git commit -m "Completed title-case.js."
+  632  git status
+  633  git push origin string-manipulation-3
+  634  git status
+  635  git master
+  636  git switch master
+  637  git pull origin master
+  638  git status
+  639  git switch object-manipulation-3
+  640  git status
+  641  git add object-manipulation-3/
+  642  git status
+  643  git commit -m "Completed object-manipulation-3 exercise."
+  644  git push origin object-manipulation-3
+  645  git status
+  646  git push origin object-manipulation-3
+  647  git status
+  648  git switch master
+  649  cd ..
+  650  cd trivial.io/
+  651  git status
+  652  git add -A
+  653  git status
+  654  git commit -m "Changed preview image."
+  655  git push origin master
+  656  git status
+  657  git add -A
+  658  git commit -m "Changed preview image again"
+  659  git push origin master
+  660  git status
+  661  git add -A
+  662  git commit -m "Still trying to find nice preview image."
+  663  git push origin master
+  664  git status
+  665  git add -A
+  666  git commit -m "Changed preview image again." 
+  667  git push origin master
+  668  git status
+  669  git pull origin master
+  670  git status
+  671  git branch backup
+  672  git switch backup
+  673  git commit -a -m "backup"
+  674  git commit --allow-empty -n "backup"
+  675  git commit --allow-empty -m "backup"
+  676  git switch master
+  677  git status
+  678  git reset --hard origin/master
+  679  git status
+  680  git add -A
+  681  git commit -m "Changed preview image again"
+  682  git push origin master
+  683  git status
+  684  cd ..
+  685  cd c0122-code-solutions/
+  686  git status
+  687  git branch es6-const-let
+  688  git switch es6-const-let
+  689  git status
+  690  git add es6-const-let/
+  691  git status
+  692  git commit -m "Completed es6-const-let exercise."
+  693  git push origin es6-const-let
+  694  git status
+  695  git switch master
+  696  git pull origin master
+  697  git status
+  698  git pull origin master
+  699  cd repos
+  700  cd c0122-code-solutions/
+  701  git status
+  702  git pull origin master
+  703  git branch es6-template-literals
+  704  git switch es6-template-literals
+  705  git status
+  706  git add -A
+  707  git status
+  708  git commit -m "Completed es6-template-literals exercise."
+  709  git push origin es6-template-literals
+  710  git status
+  711  git switch master
+  712  git branch es6-destructuring
+  713  git switch es6-6-destructuring
+  714  git switch es6-destructuring
+  715  git status
+  716  git add -A
+  717  git commit -m "Completed es6-destructuring exercise."
+  718  git push origin es6-destructuring
+  719  git status
+  720  git switch master
+  721  git status
+  722  git branch es6-arrow-functions
+  723  git switch es6-arrow-functions
+  724  git status
+  725  git add -A
+  726  git status
+  727  git commit -m "Completed es6-arrow-functions exercise."
+  728  git push origin es6-arrow-functions
+  729  git status
+  730  git add -A
+  731  git commit -m "Changed unnecessary arrow function back to ES5 function."
+  732  git push origin es6-arrow-functions
+  733  git status
+  734  git switch master
+  735  git status
+  736  git branch command-line-basics
+  737  git switch command-line basics
+  738  git switch command-line-basics
+  739  git status
+  740  cd command-line-basics
+  741  pwd
+  742  man man
+  743  man cat
+  744  git status
+  745  cd ..
+  746  cd command-line-basics
+  747  man cat
+  748  cat laziness.txt
+  749  cat impatience.txt
+  750  cat hubris.txt
+  751  man cat
+  752  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  753  cat three-virtues.txt
+  754  man ls
+  755  ls
+  756  ls -a
+  757  man ls
+  758  ls -F
+  759  man ls
+  760  ls lfz-staff
+  761  ls lfz-staff/
+  762  ls lfz-staff -a
+  763  ls lfz-staff -F
+  764  ls lfz-staff/ -F
+  765  man cat
+  766  man ls
+  767  ls -aF lfz-staff > lfz-staff/contents.txt
+  768  cat lfz-staff/contents.txt
+  769  man pwd
+  770  pwd
+  771  pwd > i-was-here.txt
+  772  ls
+  773  cat i-was-here.txt 
+  774  man echo
+  775  echo 'Hello, World!'
+  776  echo 'Hello, World!' > hello.txt
+  777  ls
+  778  cat hello.txt
+  779  man touch
+  780  touch tag-you're-it.txt
+ls
+  781  ls
+  782  touch tag-youre-it.txt
+  783  ls
+  784  touch boop.txt > snoot
+  785  touch boop.txt > snoot/
+  786  ls
+  787  ls snoot
+  788  ls snoot/
+  789  man ls
+  790  touch boop.txt > snoot/
+  791  touch boop.txt > snoot
+  792  man touch
+  793  ls snoot > touch boop.txt
+  794  ls -aF snoot
+  795  ls snoot
+  796  ls snoot/
+  797  ls -a snoot
+  798  ls -F snoot
+  799  touch boop.txt snoot
+  800  ls snoot
+  801  ls -a snoot
+  802  man mkdir
+  803  mkdir parent
+  804  ls
+  805  man mkdir
+  806  mkdir -p parent/child/grandchild
+  807  ls
+  808  ls snoot
+  809  ls parent
+  810  ls parent/child
+  811  man ls
+  812  ls parent
+  813  cd parent
+  814  touch .gitkeep
+  815  ls
+  816  cd ..
+  817  ls
+  818  ls -aF parent
+  819  cd parent
+  820  cd child
+  821  touch .gitkeep
+  822  ls -aF
+  823  cd grandchild
+  824  ls
+  825  touch .gitkeep
+  826  ls -a
+  827  cd ..
+  828  ls -a parent
+  829  man mv
+  830  mv pokiemans pokemon
+  831  ls
+  832  man rm
+  833  rm lol.txt
+  834  ls
+  835  man rm
+  836  rm -r kill-me
+  837  ls
+  838  man cp
+  839  cp and-then.txt no-and-then.txt
+  840  ls
+  841  cat and-then.txt
+  842  cat no-and-then.txt
+  843  man history
+  844  history
+  845  history > command-history.txt
+  846  ls
+  847  touch ../snoot/boop2.txt
+  848  touch /snoot/boop2.txt
+  849  ls
+  850  touch snoot/boop2.txt
+  851  ls
+  852  ls parent
+  853  ls -a parent
+  854  ls rm parent/child/.gitkeep
+  855  rm parent/child/.gitkeep
+  856  ls -a parent/child
+  857  touch parent/child/.gitkeep
+  858  ls -a parent/child
+  859  ls -a parent/child/grandchild
+  860  ls laziness.txt
+  861  cat laziness.txt
+  862  cat tag-youre-it.txt
+  863  ls
+  864  cat lfz-staff
+  865  cat lfz-staff/contents.txt 
+  866  ls
+  867  git status
+  868  cd ..
+  869  git status
+  870  cd command-line-basics
+  871  man history
+  872  history
+  873  ls
+  874  cat command-history.txt
+  875  rm command-history.txt
+  876  ls
+  877  history > command-history.txt
