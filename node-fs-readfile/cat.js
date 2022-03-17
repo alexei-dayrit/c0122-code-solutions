@@ -1,8 +1,22 @@
 const fs = require('fs');
 
-for (let i = 2; i < process.argv.length; i++) {
-  fs.readFile(process.argv[i], 'utf8', (err, data) => {
+const fileName = process.argv[2];
+const fileName2 = process.argv[3];
+const fileName3 = process.argv[4];
+
+function testReadIt() {
+  fs.readFile(fileName, 'utf8', (err, data) => {
     if (err) throw err;
     console.log(data);
+    fs.readFile(fileName2, 'utf8', (err, data) => {
+      if (err) throw err;
+      console.log(data);
+      fs.readFile(fileName3, 'utf8', (err, data) => {
+        if (err) throw err;
+        console.log(data);
+      });
+    });
   });
 }
+
+testReadIt();
