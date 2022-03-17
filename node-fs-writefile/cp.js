@@ -7,7 +7,7 @@ fs.readFile(fileToCopy, (err, data) => {
     console.error(err);
     process.exit(1);
   }
-  fs.writeFile('reminder.txt', data, err => {
+  fs.writeFile('reminder.txt', data + '\n', err => {
     if (err) {
       console.error(err);
       process.exit(1);
