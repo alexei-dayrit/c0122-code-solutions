@@ -3,14 +3,9 @@ const parsed = require('./data.json');
 
 // READ
 if (process.argv[2] === 'read') {
-  fs.readFile('./data.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-    }
-    for (const prop2 in parsed.notes) {
-      console.log(prop2 + ': ' + parsed.notes[prop2]);
-    }
-  });
+  for (const prop in parsed.notes) {
+    console.log(prop + ': ' + parsed.notes[prop]);
+  }
 }
 
 // CREATE
