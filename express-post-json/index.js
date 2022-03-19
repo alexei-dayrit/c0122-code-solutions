@@ -12,12 +12,9 @@ for (const prop in grades) {
 
 app.get('/api/grades', (req, res) => {
   res.json(newArr);
-  // eslint-disable-next-line no-console
-  console.log('Got a GET request!');
 });
 
 app.post('/api/grades', (req, res) => {
-  // res.json controls the bottom output
   res.status(201).json({
     id: nextId,
     name: req.body.name,
@@ -31,8 +28,6 @@ app.post('/api/grades', (req, res) => {
     score: req.body.score
   });
   nextId++;
-  // eslint-disable-next-line no-console
-  console.log('Got a POST request!');
 });
 
 app.listen(3000, () => {
