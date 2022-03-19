@@ -28,7 +28,7 @@ for (const prop in grades) {
 }
 
 app.get('/api/grades', (req, res) => {
-  res.send(newArr);
+  res.json(newArr);
 });
 
 app.listen(3000, () => {
