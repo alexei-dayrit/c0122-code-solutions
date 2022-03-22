@@ -30,15 +30,14 @@ app.get('/api/notes/:id', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-  const nextIdName = parsedData.nextId;
-  const nextIdNum = parsedData.nextId;
+  const currentNextId = parsedData.nextId;
   if (!req.body.content) {
     res.status(400).json({
       error: 'Content is a required field'
     });
   } else if (req.body.content) {
-    parsedData.notes[nextIdName] = {
-      id: parsedData.nextId,
+    parsedData.notes[currentNextId] = {
+      id: currentNextId,
       content: req.body.content
     };
     parsedData.nextId++;
@@ -51,7 +50,7 @@ app.post('/api/notes', (req, res) => {
         });
       } else {
         res.status(201).json({
-          id: nextIdNum,
+          id: currentNextId,
           content: req.body.content
         });
       }
