@@ -43,7 +43,7 @@ app.post('/api/notes', (req, res) => {
     };
     parsedData.nextId++;
     const newNote = JSON.stringify(parsedData, null, 2);
-    fs.writeFile('./derp/data.json', newNote, err => {
+    fs.writeFile('./data.json', newNote, err => {
       if (err) {
         console.error(err);
         res.status(500).json({
@@ -73,7 +73,7 @@ app.delete('/api/notes/:id', (req, res) => {
   } else if (parseInt(req.params.id) === parsedData.notes[req.params.id].id) {
     delete parsedData.notes[req.params.id];
     const note = JSON.stringify(parsedData, null, 2);
-    fs.writeFile('./derp/data.json', note, err => {
+    fs.writeFile('./data.json', note, err => {
       if (err) {
         console.error(err);
         res.status(500).json({
@@ -108,7 +108,7 @@ app.put('/api/notes/:id', (req, res) => {
       content: req.body.content
     };
     const newNote = JSON.stringify(parsedData, null, 2);
-    fs.writeFile('./derp/data.json', newNote, err => {
+    fs.writeFile('./data.json', newNote, err => {
       if (err) {
         console.error(err);
         res.status(500).json({
