@@ -5,28 +5,19 @@ app.use(express.json());
 
 var nextId = 1;
 const grades = {};
-const newArr = [];
-for (const prop in grades) {
-  newArr.push(grades[prop]);
-}
 
 app.get('/api/grades', (req, res) => {
+  const newArr = [];
+  for (const prop in grades) {
+    newArr.push(grades[prop]);
+  }
   res.json(newArr);
 });
 
 app.post('/api/grades', (req, res) => {
-  res.status(201).json({
-    id: nextId,
-    name: req.body.name,
-    course: req.body.course,
-    score: req.body.score
-  });
-  newArr.push({
-    id: nextId,
-    name: req.body.name,
-    course: req.body.course,
-    score: req.body.score
-  });
+  req.body.id = nextId;
+  grades[nextId] = req.body;
+  res.status(201).json(req.body);
   nextId++;
 });
 
