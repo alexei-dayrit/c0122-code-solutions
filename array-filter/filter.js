@@ -18,7 +18,8 @@ function filter(array, predicate) {
   const newArr = [];
   for (let i = 0; i < array.length; i++) {
     const currentArrayItem = array[i];
-    if (predicate(currentArrayItem) === true) {
+    // Check if 'truthy' not necessarily true
+    if (predicate(currentArrayItem)) {
       newArr.push(currentArrayItem);
     }
   }
