@@ -13,7 +13,7 @@ const names = [
 ];
 
 const evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log('evenNums const:', evenNumbers);
+console.log('evenNumbers const:', evenNumbers);
 
 const overFive = numbers.filter(num => num >= 5);
 console.log('overFive const:', overFive);
