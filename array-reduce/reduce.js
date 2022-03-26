@@ -17,6 +17,19 @@ const traits2 = [
   { trainer: 'ash' }
 ];
 
+function reduce(array, combine, initialValue) {
+  let i = 0;
+  if (arguments.length === 2) {
+    i = 1;
+    initialValue = array[0];
+  }
+  for (; i < array.length; i++) {
+    initialValue = combine(initialValue, array[i], i, array);
+  }
+  return initialValue;
+}
+
+/* FIRST ATTEMPT
 function reduce(array, reducer, initialValue) {
   let total = 0;
   if (initialValue) {
@@ -28,10 +41,13 @@ function reduce(array, reducer, initialValue) {
   }
   return total;
 }
+*/
 
 console.log('USING BONUS CHALLENGE BELOW');
 
-const sumReduce = reduce(numbers2, (previous, current) => previous + current);
+const sumReduce = reduce(numbers2, (previous, current) => {
+  return previous + current;
+});
 console.log('sumReduce const:', sumReduce);
 
 const getProduct2 = (previous, current) => previous * current;
@@ -52,5 +68,5 @@ const balanceReduce = account2.reduce(getBalance2, initialValue2);
 console.log('balanceReduce const:', balanceReduce);
 
 const getComposite2 = (previous, current) => Object.assign(previous, current);
-const compositeReduce = traits2.reduce(getComposite2);
+const compositeReduce = traits2.reduce(getComposite2, {});
 console.log('compositeReduce const:', compositeReduce);
