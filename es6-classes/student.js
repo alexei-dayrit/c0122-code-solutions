@@ -8,7 +8,9 @@ class Student {
   }
 
   getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+    // destructuring first and last name properties of the 'this' obj
+    const { firstName, lastName } = this;
+    return `${firstName} ${lastName}`;
   }
 
   getIntroduction() {
