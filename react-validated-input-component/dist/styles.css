@@ -24,6 +24,19 @@ body {
   padding: 20px;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col-four-fifths {
+  width: 80%;
+}
+
+.col-one-fifth {
+  width: 20%;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -37,9 +50,25 @@ label {
 
 input[type="password"] {
   border: 2px solid black;
-  margin-bottom: 0.5rem;
 }
 
 input[type="submit"] {
   width: 4rem;
+}
+
+.fa-check {
+  color: green;
+  font-size: 1.5rem;
+  margin-left: 0.6rem;
+}
+
+.fa-xmark {
+  color: red;
+  font-size: 1.5rem;
+  margin-left: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.error-msg {
+  color: rgb(180 4 4);
 }
