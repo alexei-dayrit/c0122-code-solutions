@@ -38,11 +38,9 @@ export default class Carousel extends React.Component {
   }
 
   handledDotClicks(id, event) {
-    if (id !== this.state.currentImage) {
-      this.setState({
-        currentImage: id
-      });
-    }
+    this.setState({
+      currentImage: id
+    });
     clearInterval(this.intervalID);
     this.intervalID = setInterval(this.handleNextImage, 3000);
   }
