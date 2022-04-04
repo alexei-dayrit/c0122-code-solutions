@@ -54,6 +54,7 @@ input[type="password"] {
 
 input[type="submit"] {
   width: 4rem;
+  margin-top: 0.5rem;
 }
 
 .fa-check {
@@ -66,7 +67,6 @@ input[type="submit"] {
   color: red;
   font-size: 1.5rem;
   margin-left: 0.6rem;
-  margin-top: 1.5rem;
 }
 
 .error-msg {

@@ -5,8 +5,7 @@ export default class ValidatedInput extends React.Component {
     super(props);
     this.state = ({
       password: '',
-      isFocused: true
-      // isSubmitted: false
+      isClicked: false
     });
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -19,25 +18,28 @@ export default class ValidatedInput extends React.Component {
   }
 
   handleFocus(event) {
-    this.setState({ isFocused: true });
+    this.setState({ isClicked: false });
   }
 
   handleBlur(event) {
-    this.setState({ isFocused: false });
+    this.setState({ isClicked: true });
   }
 
   handleSubmit(event) {
-    event.preventdefault();
+    event.preventDefault();
     if (this.state.password.length < 8) {
-      // console.log('wrong');
-      // eslint-disable-next-line no-useless-return
+      // eslint-disable-next-line no-console
+      console.log('Error. Password must be at least 8 characters.');
+      this.setState({ isClicked: true });
       return;
     }
+    // eslint-disable-next-line no-console
+    console.log('this.state.password', this.state.password);
   }
 
   render() {
     const password = this.state.password;
-    const isFocused = this.state.isFocused;
+    const isClicked = this.state.isClicked;
     return (
       <div className='container'>
         <div className="row">
@@ -51,19 +53,19 @@ export default class ValidatedInput extends React.Component {
             </form>
           </div>
           <div className='col-one-fifth'>
-            {password.length > 8 && (
+            {password.length >= 8 && (
                 <i className="fa-solid fa-check"></i>
             )}
-            {!isFocused && password.length < 8 && (
+            {isClicked && password.length < 8 && (
               <i className="fa-solid fa-xmark"></i>
             )}
           </div>
         </div>
          <div className='error-msg'>
-           {!isFocused && password.length === 0 && (
+           {isClicked && password.length === 0 && (
              <p>A password is required.</p>
            )}
-           {!isFocused && password.length > 0 && password.length < 8 && (
+           {isClicked && password.length > 0 && password.length < 8 && (
              <p>Your password is too short.</p>
            )}
           </div>
