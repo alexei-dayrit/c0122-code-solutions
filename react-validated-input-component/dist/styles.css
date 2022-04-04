@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: rgb(120 153 180 / 60.3%);
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.container {
+  border: 3px solid black;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+input[type="password"] {
+  border: 2px solid black;
+  margin-bottom: 0.5rem;
+}
+
+input[type="submit"] {
+  width: 4rem;
+}
