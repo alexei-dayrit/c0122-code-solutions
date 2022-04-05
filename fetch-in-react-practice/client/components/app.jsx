@@ -60,6 +60,7 @@ export default class App extends React.Component {
       .then(res => res.json())
       .then(todo => {
         const todosList = this.state.todos;
+        // concat() returns a new array
         const updatedTodos = todosList.concat(todo);
         this.setState({
           todos: updatedTodos
@@ -93,6 +94,7 @@ export default class App extends React.Component {
 
     // eslint-disable-next-line no-console
     console.log('Sent PATCH request');
+    // const todosList is a REFERENCE to original to original todos list
     const todosList = this.state.todos;
     let currentIndex = null;
     const matchingTodo = todosList.find((todo, index) => {
@@ -107,9 +109,11 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(todo => {
-        todosList.splice(currentIndex, 1, todo);
+        // slice returns copy of array if called with no arguments
+        const shallowTodosList = todosList.slice();
+        shallowTodosList.splice(currentIndex, 1, todo);
         this.setState({
-          todos: todosList
+          todos: shallowTodosList
         });
       })
       .catch(err => console.error(err));
