@@ -9,6 +9,7 @@ function authorizationMiddleware(req, res, next) {
   if (!accessToken) {
     throw new ClientError(401, 'authentication required');
   }
+  // verify() checks to make sure the accessToken is legit
   const payload = jwt.verify(accessToken, process.env.TOKEN_SECRET);
   req.user = payload;
   next();
