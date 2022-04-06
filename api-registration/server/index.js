@@ -25,8 +25,11 @@ app.post('/api/auth/sign-up', (req, res, next) => {
   }
 
   /* your code starts here */
-  argon2.hash(password)
+  argon2
+    .hash(password) // hash returns a promise
     .then(hashedPassword => {
+      // good idea to explicitly state what you want from 'returning' so don't
+      // have to return more than necessary
       const sql = `
         insert into "users" ("username", "hashedPassword")
         values ($1, $2)
@@ -39,8 +42,10 @@ app.post('/api/auth/sign-up', (req, res, next) => {
           const [newUser] = result.rows;
           res.status(201).json(newUser);
         })
+        // catch err for query()
         .catch(err => next(err));
     })
+    // catch err for hash()
     .catch(err => next(err));
   /**
    * Hash the user's password with `argon2.hash()`
