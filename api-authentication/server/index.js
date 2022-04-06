@@ -36,6 +36,7 @@ app.post('/api/auth/sign-up', (req, res, next) => {
       return db.query(sql, params);
     })
     .then(result => {
+      // same as result.rows[0]
       const [user] = result.rows;
       res.status(201).json(user);
     })
@@ -62,6 +63,11 @@ app.post('/api/auth/sign-in', (req, res, next) => {
       if (!user) {
         throw new ClientError(401, 'invald login');
       }
+      // can destructure user:
+      // const {userId, hashedPassword} = user;
+      // then use 'hashedPassword' instead of user.hashedPassword
+      // if 'return argon2' on line 71, then won't need catch on line 85
+      // because the inner becomes associated with the outer now
       argon2
         .verify(user.hashedPassword, password)
         .then(isMatching => {
@@ -73,7 +79,8 @@ app.post('/api/auth/sign-in', (req, res, next) => {
             username: username
           };
           const token = jwt.sign(payload, process.env.TOKEN_SECRET);
-          res.status(200).json({ token, payload });
+          // QnA: res.json({token: token, user: payload})
+          res.status(200).json({ token, user: payload });
         })
         .catch(err => next(err));
     })
