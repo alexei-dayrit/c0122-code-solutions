@@ -1,0 +1,54 @@
+User can sign up:
+- App is rendered with state isAuthorizing: true, user: null, and route: parseRoute(window.location.hash)
+- After first render, componentDidMount changes state with setState and calls for render()
+  again, but with isAuthorizing: false
+- Page is rendered with Auth component which gives option to sign up or sign in
+  from the AuthForm component render
+- AuthForm is waiting for state changes on the username and password fields, as well
+  as the sign up button
+- When user submits sign up, a fetch request is made to /api/auth/sign-up
+  and window.location.hash is changed to sign in
+  - The server checks if req.body contains username and password
+    - if not then it throws error 400
+    - If they're present then argon2 returns a promise of the hashed password
+      - Then database is queried to insert a new user with the username and hashed password
+      - Then returns status 201 and user info to the client
+      - if argon2 promise not fulfilled then error is caught and handled by express
+- App Component renders again, then AuthForm renders again, but with sign in page
+
+User can sign in.
+- App is rendered with state isAuthorizing: true, user: null, and route: parseRoute(window.location.hash)
+- After first render, componentDidMount changes state with setState and calls for render()
+  again, but with isAuthorizing: false
+- Page is rendered with Auth component which gives option to sign up or sign in
+  from the AuthForm component render
+- AuthForm is waiting for state changes on the username and password fields, as well
+  as the sign in button
+- When user submits sign in, a fetch request is made to /api/auth/sign-in
+  - The server checks if req.body contains username and password
+    - if not then it throws error 401 for invalid login
+  - The database is queried to find a matching user
+    - if they don't exist then it throws error 401 for invalid login
+    - If they exist then argon2 returns a promise of true/false for matching password/hashedPassword
+      - if not matching then error 401
+      - if matching then new payload obj is made with userId and username
+        - new token is signed with payload and token secret
+        - client is sent response with their token and payload
+    - if argon2 promise or db.query not fulfilled then error is caught and handled by express
+- User token is stored in local storage and Home component runs
+- App Component renders again, then AuthForm renders again
+
+User can stay signed in (even if they refresh the page).
+- App loads and renders
+- componentDidMount immediately runs and checks if token exists in local storage
+  - if it does then decodeToken function is run to check if token is valid and matches user
+- State is set to user and isAuthorizing: false, so React doesn't call for rerender
+
+User can sign out.
+- User is on home page (#)
+- If they click the sign out button in the navbar then event listener 'handleSignOut' fires
+  - Token is removed from local storage
+  - user's state is changed to null
+- React calls for a re render since user is null based on context given to Home component,
+  then Redirect component is called
+  - Sign in view is rendered because Home component passes in props to='sign-in'
