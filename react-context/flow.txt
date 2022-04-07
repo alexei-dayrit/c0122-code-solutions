@@ -1,8 +1,8 @@
 User can sign up:
 - App is rendered with state isAuthorizing: true, user: null, and route: parseRoute(window.location.hash)
 - After first render, componentDidMount changes state with setState and calls for render()
-  again, but with isAuthorizing: true
-- Page is rendered with Auth Component which gives option to sign up or sign in
+  again, but with isAuthorizing: false
+- Page is rendered with Auth component which gives option to sign up or sign in
   from the AuthForm component render
 - AuthForm is waiting for state changes on the username and password fields, as well
   as the sign up button
@@ -19,13 +19,12 @@ User can sign up:
 User can sign in.
 - App is rendered with state isAuthorizing: true, user: null, and route: parseRoute(window.location.hash)
 - After first render, componentDidMount changes state with setState and calls for render()
-  again, but with isAuthorizing: true
-- Page is rendered with Auth Component which gives option to sign up or sign in
+  again, but with isAuthorizing: false
+- Page is rendered with Auth component which gives option to sign up or sign in
   from the AuthForm component render
 - AuthForm is waiting for state changes on the username and password fields, as well
   as the sign in button
 - When user submits sign in, a fetch request is made to /api/auth/sign-in
-  and window.location.hash is changed to sign in
   - The server checks if req.body contains username and password
     - if not then it throws error 401 for invalid login
   - The database is queried to find a matching user
@@ -50,5 +49,6 @@ User can sign out.
 - If they click the sign out button in the navbar then event listener 'handleSignOut' fires
   - Token is removed from local storage
   - user's state is changed to null
-- React calls for a re render since user is null, Redirect component is called
+- React calls for a re render since user is null based on context given to Home component,
+  then Redirect component is called
   - Sign in view is rendered because Home component passes in props to='sign-in'
