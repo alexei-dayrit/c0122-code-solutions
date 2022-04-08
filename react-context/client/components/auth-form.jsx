@@ -13,6 +13,9 @@ export default class AuthForm extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
+    // [name] is a computed property
+    // basically use [name] to setState as variable
+    // username: and value:
     this.setState({ [name]: value });
   }
 

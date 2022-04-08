@@ -39,6 +39,9 @@ export default class App extends React.Component {
 
   handleSignOut() {
     window.localStorage.removeItem('react-context-jwt');
+    // setStates control in parent-child relationship
+    // so this setState renders whole app again
+    // but component that's nested will only render itself
     this.setState({ user: null });
   }
 
@@ -54,10 +57,15 @@ export default class App extends React.Component {
   }
 
   render() {
+    // return null tells react to not render anything
     if (this.state.isAuthorizing) return null;
     const { user, route } = this.state;
     const { handleSignIn, handleSignOut } = this;
+    // Basically stores variables into context and now anything attached to this
+    // context type can now use those variables.
+    // Think of it as global props that components/functions can opt into it
     const contextValue = { user, route, handleSignIn, handleSignOut };
+    // anything nested in AppContext.Provider has access to context
     return (
       <AppContext.Provider value={contextValue}>
         <>
@@ -70,3 +78,4 @@ export default class App extends React.Component {
     );
   }
 }
+// this.renderPage() lets the other components be in the contextProvider on render
