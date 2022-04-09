@@ -8,5 +8,8 @@ const lawSchool = graduate('Esq.');
 medicalSchool('Dan Abramov');
 lawSchool('Ryan Florence');
 
-console.log(medicalSchool('Dan Abramov'));
-console.log(lawSchool('Ryan Florence'));
+const dan = medicalSchool('Dan Abramov');
+const ryan = lawSchool('Ryan Florence');
+
+console.log(dan);
+console.log(ryan);

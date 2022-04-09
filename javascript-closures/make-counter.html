@@ -22,6 +22,9 @@
       };
     };
 
+    // makeCounter() being called creates a new 'factory',
+    // so privateCounter initalized at 0 at every call
+    // that's why counter1 and counter2 have separate values
     const counter1 = makeCounter();
     const counter2 = makeCounter();
 
