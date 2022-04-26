@@ -1,5 +1,14 @@
 /* exported Stack */
 
+/**
+ * Possible applicable question: isBalanced (VScode implementation)
+ * input: string of braces parentheses, square brackets, curly braces
+ * example: "[]" or "()" or "{{}}" -> return true
+ *          "{]" or "(" or "[[(])]" -> false
+ * set of braces is balance if all of them match each other
+ *
+ * solution with stack = linear time
+ */
 class Stack {
 
   constructor(...values) {
@@ -8,7 +17,7 @@ class Stack {
 
     let index = 0;
 
-    this.push = function (value) {
+    this.push = function (value) { // constant time - O(1) // same amount of operations regardless of the input's (value) size
       if (arguments.length < 1) {
         throw new TypeError('stack.push() requires a value argument');
       }
@@ -19,7 +28,7 @@ class Stack {
       index++;
     };
 
-    this.pop = function () {
+    this.pop = function () { // constant time - O(1)
       const last = index - 1;
       if (last < 0) return;
       const value = data[last];
@@ -28,13 +37,13 @@ class Stack {
       return value;
     };
 
-    this.peek = function () {
+    this.peek = function () { // constant time - O(1)
       const last = index - 1;
       if (last < 0) return;
       return data[last];
     };
 
-    this.print = function () {
+    this.print = function () { // linear time - O(n)
       if (index === 0) {
         return 'Stack { <empty> }';
       }
