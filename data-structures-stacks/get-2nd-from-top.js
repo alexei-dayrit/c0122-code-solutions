@@ -9,3 +9,13 @@ function get2ndFromTop(stack) {
   stack.push(lastVal);
   return secondToLast;
 }
+
+/*
+  Alternative solution:
+
+  const top = stack.pop()
+  if (typeof top === 'undefined') return; // this is a guard (returns undefined)
+  const next = stack.peek();
+  stack.push(top);
+  return next;
+*/

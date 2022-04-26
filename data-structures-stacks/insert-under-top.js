@@ -8,3 +8,13 @@ function insertUnderTop(stack, value) {
   stack.push(value);
   stack.push(last);
 }
+
+/*
+Alternative solution:
+
+const top = stack.pop()
+if (typeof top === 'undefined') return;
+stack.push(value);
+stack.push(top);
+
+*/
