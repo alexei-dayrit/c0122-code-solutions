@@ -9,3 +9,10 @@ function getTail(list) {
   }
   return last;
 }
+
+/*
+  Alt solution:
+
+  while(list.next) list = list.next;
+  return list.data;
+*/
