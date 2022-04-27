@@ -6,3 +6,13 @@ function take2nd(queue) {
   queue.enqueue(originalFront);
   return queue.dequeue();
 }
+
+/*
+  Alternate solution:
+
+  if (typeof queue.peek() === 'undefined) {
+    return;
+  }
+  queue.enqueue(queue.dequeue());
+  return queue.dequeue();
+*/
